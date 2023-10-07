@@ -1,0 +1,15 @@
+<div class="card my-2 bg-light">
+  <div class="card-body">
+    <h5 class="card-title">{{ house.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ house.region }}</h6>
+    <p class="card-text">
+      {{ house.coatOfArms }}
+    </p>
+    <a
+      [routerLink]="['/house']"
+      [queryParams]="{ houseId: house.url.split('/').at(-1) }"
+      class="btn btn-primary"
+      >En savoir plus...</a
+    >
+  </div>
+</div>

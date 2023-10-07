@@ -1,0 +1,18 @@
+<main class="container">
+  <section class="card-header mt-4">
+    <div class="bg-light rounded d-flex flex-column align-items-center">
+      <h1>{{ house.name }}</h1>
+      <ul>
+        <li>Région : {{ house.region || "inconnue" }}</li>
+        <li>Manteau : {{ house.coatOfArms || "inconnue" }}</li>
+        <li>Siège : {{ house.seats || "inconnue" }}</li>
+      </ul>
+      <a
+        [routerLink]="['/characters']"
+        [queryParams]="{ houseId: house.url.split('/').at(-1) }"
+        class="btn btn-primary"
+        >Membres liés</a
+      >
+    </div>
+  </section>
+</main>

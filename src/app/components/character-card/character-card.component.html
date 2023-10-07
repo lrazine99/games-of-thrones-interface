@@ -1,0 +1,15 @@
+<div class="card my-2 bg-light">
+  <div class="card-body">
+    <h5 class="card-title">{{ character.name || "Inconnue" }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ character.aliases[0] }}</h6>
+
+    <p>{{ character.title }}</p>
+
+    <a
+      [routerLink]="['/character']"
+      [queryParams]="{ characterId: character.url.split('/').at(-1) }"
+      class="btn btn-primary"
+      >En savoir plus...</a
+    >
+  </div>
+</div>

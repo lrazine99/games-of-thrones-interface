@@ -1,0 +1,11 @@
+<main>
+  <h1 class="text-center">Maisons</h1>
+  <div
+    class="container d-flex flex-row flex-wrap card-deck justify-content-md-between justify-content-center mt-5"
+    *ngIf="houses.length > 0"
+  >
+    <div *ngFor="let house of houses">
+      <app-house-card [house]="house"></app-house-card>
+    </div>
+  </div>
+</main>

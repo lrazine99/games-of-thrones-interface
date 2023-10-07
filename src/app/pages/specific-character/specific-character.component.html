@@ -1,0 +1,21 @@
+<main class="container">
+  <section class="card-header mt-4">
+    <div class="bg-light rounded d-flex flex-column align-items-center">
+      <h1>{{ character.name || character.aliases }}</h1>
+      <ul>
+        <li>Titre : {{ character.name || "inconnue" }}</li>
+        <li>Genre : {{ character.gender || "inconnue" }}</li>
+        <li>Père : {{ character.father || "inconnue" }}</li>
+        <li>Mère : {{ character.mother || "inconnue" }}</li>
+        <li>Epouse : {{ character.spouse || "inconnue" }}</li>
+        <li>Joué par : {{ character.playedBy[0] || "inconnue" }}</li>
+      </ul>
+      <a
+        [routerLink]="['/books']"
+        [queryParams]="{ characterId: character.url.split('/').at(-1) }"
+        class="btn btn-primary"
+        >Livres liés</a
+      >
+    </div>
+  </section>
+</main>

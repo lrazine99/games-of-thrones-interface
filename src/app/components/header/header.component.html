@@ -1,0 +1,25 @@
+<header >
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand ml-2" routerLink="/"> GOT </a>
+
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngClass]="{ show: navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/books">Livres</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/characters">Personnages</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/houses">Maisons</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

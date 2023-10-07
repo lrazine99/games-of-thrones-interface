@@ -1,0 +1,13 @@
+<div class="card my-2 bg-light">
+  <div class="card-body">
+    <h5 class="card-title">{{ book.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ book.authors }}</h6>
+    <p class="card-text">Paru : {{ book.released | date : "dd-MM-yyyy" }}</p>
+    <a
+      [routerLink]="['/book']"
+      [queryParams]="{ bookId: book.url.split('/').at(-1) }"
+      class="btn btn-primary"
+      >En savoir plus...</a
+    >
+  </div>
+</div>

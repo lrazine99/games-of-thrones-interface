@@ -1,0 +1,20 @@
+<main class="container">
+  <section class="card-header mt-4">
+    <div class="bg-light rounded d-flex flex-column align-items-center">
+      <h1>{{ book.name }}</h1>
+      <ul>
+        <li>Auteur : {{ book.authors }}</li>
+        <li>Maison d'édition : {{ book.publisher }}</li>
+        <li>Pays : {{ book.country }}</li>
+        <li>Maison d'édition : {{ book.publisher }}</li>
+        <li>Paru : {{ book.released | date : "dd-MM-yyyy" }}</li>
+      </ul>
+      <a
+        [routerLink]="['/characters']"
+        [queryParams]="{ bookId: book.url.split('/').at(-1) }"
+        class="btn btn-primary"
+        >Personnages du Livre</a
+      >
+    </div>
+  </section>
+</main>
